@@ -3,74 +3,23 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
-.header{
+h1{
     position: fixed;
-    background-color:rgb(231, 231, 213);
-    display: inline-grid;
-    width: 15vw;
-    height: 5rem;
-    grid-area: header;
-}
-.nombre--uppercase{
-    text-transform: uppercase;
-    text-align: left;
-    color: rgb(39, 36, 36);
-font-family: 'Times New Roman', Times, serif;
-margin-left: 3%;
-margin-top: 2%;
-}
-.nombre{
-text-transform: capitalize;
-text-align: left;
-color: rgb(39, 36, 36);
-font-family: 'Times New Roman', Times, serif;
-margin-left: 1%;
+font-size: 2rem;
+text-align: justify;
+margin-left: 2rem;
+margin-top: 0,5rem;
 }
 
-.header__navegador{
-    grid-area: nav;
+.nav-link{
     list-style-type: none;
     text-align: center;
     text-decoration: none; 
-    padding: 20vw;
-    margin: 0; 
-    background-color: rgb(231, 231, 213);
-   display: inline-flex;
+   display: flex;
    align-items: flex-end;
    flex-direction: row;
-}
-
-.card{
-    grid-area: banner;
-    background-color: rgb(173, 173, 164) ;
-    height: 45vw;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    border-width: medium;
-}
-
-.card__image{  
-    height: 90%;
-    width: 90%;
-    display: inline-block;
-    margin-left: 5%;
-    margin-top: 2%;
-    align-content: center;
- }
-
- .borderRounded{
    
-    font-size: 100%;
-    padding: 5px;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
 }
-
  .cards{
      width: 25vw;
      height: auto;
@@ -80,9 +29,9 @@ margin-left: 1%;
      border-color: black;
      border-width: 2px;
      border-style: solid;
-     grid-area: cards;
-     display: flex;
      
+     display: flex;
+     transition: heigth 2seg; 
     }
  .cards__img {
      width: 100%;
@@ -90,15 +39,17 @@ margin-left: 1%;
      margin-right: auto;
      display: block;
      background-color: black;
-     grid-area: cards;
+     
  }
-
+ .cards:hover{
+     width: 35rem;
+ }
  .cards__description__text{
      font-size: small;
      font-family: Arial, Helvetica, sans-serif;
      text-align: justify;
      line-height: 15px;
-     grid-area: cards;
+     
  }
 
  .cards__description__name{
@@ -119,36 +70,14 @@ margin-left: 1%;
 }
  .footer{
      background-color: black;
-     color: rgb(192, 192, 185);
+     color: rgb(240, 240, 230);
      position: static;
      width: 100vw;
-     grid-area: footer; 
+    height: 7rem;
  }
- .titulo{
-    position: static;
-    background-color: beige;
-    display: inline;
-    width: 100vw;
-    height: 10rem;
-    grid-area: header;
- }
- .titulo__navegador{
-    list-style-type: none;
-  text-align: center;
-  text-decoration: none; 
-  padding: 0;
-  margin: 0; 
-  background-color: beige;
-  grid-area: nav;
- }
- .barra{
-    display: inline-block;
-    font-size: 20px;
-    padding: 5px;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-decoration: none;
- }
+ 
+ 
+ 
  .tarjetas{
     width: 40vw;
     border:rgb(31, 29, 29);
@@ -159,7 +88,10 @@ margin-left: 1%;
     border-style: solid;
     background-color: black;
     display: inline-block;
-    grid-area: cards;
+    transition: heigth 2seg;
+ }
+ .tarjetas:hover{
+     width: 40rem;
  }
  .tarjetas__img{
     width: 100%;
@@ -167,17 +99,17 @@ margin-left: 1%;
     margin-right: auto;
     display: block;
     background-color: black;
-    grid-area: cards;
+    
  }
  .tajetas__descripcion{
      background-color: beige;
      text-align: center;
-     grid-area: cards;
+     
  }
 .formulario{
     width: 400px;
     background-color: darkgrey;
-    grid-area: formulario;
+  
 }
 iframe{
     padding: 3rem;
@@ -213,63 +145,344 @@ iframe{
     margin-left: auto;
     margin-right: auto;
 }
-.grid-container{
-    display: grid;
-    grid-template-areas:
-    "header nav nav" 10%
-    "banner banner banner" 30%
-    "cards cards cards" 50%
-    "footer footer footer" 10%
-    ; 
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: repeat(3,1fr);
-    height: 100vw;
-    margin: 2%;
-}
-.gridContenedor{
-    display: grid;
-    grid-template-areas:
-    "header nav nav"
-    "formulario formulario formulario"
-    "mapa mapa mapa"
-    "footer footer footer";
-    
-}
-@media only screen and (max-width: 480px)
-  {}.grid-container{
-      display: grid;
-      grid-template-areas: "header nav"
-      "banner banner"
-      "cards cards"
-      "footer footer";
-      grid-template-columns: repeat(2, auto);
-      grid-template-rows: 1fr 2fr 3fr 1fr ;
-
-  }
-  .header{
-    position: fixed;
-    background-color:rgb(231, 231, 213);
+h5{
     display: flex;
-    justify-content: left;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+}
+h3{
+    font-size: large;
+}
+h4{
+    font-size: large;
+}
+@media  screen and (max-width: 480px)
+  {}
+  
+    .footer{
+    background-color: black;
+    color: rgb(192, 192, 185);
+    position: static;
     width: 100vw;
     height: 7rem;
-    grid-area: header;
-}
-.header__navegador{
-    grid-area: nav;
-    list-style-type: none;
+    }
+    h5{
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    }
+    h4{
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    }
+    h3{
+    height:fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    }
+    .premios{
+    width: 14vw;
+    height: auto;
+    margin: 0,5rem;
+    padding: 1rem;
+    display: block;
     text-align: center;
-    text-decoration: none; 
-    padding: 0;
-    margin: 0; 
-    background-color: rgb(231, 231, 213);
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .cards{
+        width: 15vw;
+        height: auto;
+        border:rgb(31, 29, 29);
+        margin: 0,5rem;
+        border-radius: 0,5rem;
+        border-color: black;
+        border-width: 0.2rem;
+        border-style: solid;
+        
+        display: flex;
+        transition: heigth 2seg; 
+       }
+    .cards__img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: black;
+        
+    }
+    .cards:hover{
+        width: 15rem;
+    }
+    .cards__description__text{
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        line-height: 1rem;
+        
+    }
    
-}
-.card{
-    grid-area: banner;
-    background-color: rgb(173, 173, 164) ;
-    height: 45vw;
-    width: 100vw;
+    .cards__description__name{
+        margin-top: 0,7rem;
+        margin-bottom: 0.5rem;
+        padding-left: 0,7rem;
+        
+    }
+   .cardsBtn{
+       width: 0,5rem;
+       margin: 1rem;
+       text-align: start;
+       text-decoration: none;
+       display: inline;
+       color: black;
+       background-color: darkgrey;
+       
+   }
+   .tarjetas{
+    width: 25vw;
+    border:rgb(31, 29, 29);
+    margin: 2rem;
+    border-radius: 0,5rem;
+    border-color: black;
+    border-width: 0,2rem;
+    border-style: solid;
+    background-color: black;
     display: inline-block;
-    border-width: medium;
-}
+    transition: heigth 2seg;
+ }
+ .tarjetas:hover{
+     width: 20rem;
+ }
+ .tarjetas__img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: black;
+    
+ }
+ .tajetas__descripcion{
+     background-color: beige;
+     text-align: center;
+     
+ }
+@media screen and (max-width: 768px)
+{}    
+   
+    h5{
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    }
+    h4{
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+    }
+    h3{
+    height:fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+    }
+    .footer{
+        background-color: black;
+        color: rgb(192, 192, 185);
+        position: static;
+        width: 100vw;
+        height: 11rem;
+    }
+    .premios{
+        width: 17vw;
+        height: auto;
+        margin: 1rem;
+        padding: 1rem;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cards{
+        width: 20vw;
+        height: auto;
+        border:rgb(31, 29, 29);
+        margin: 2rem;
+        border-radius: 0,5rem;
+        border-color: black;
+        border-width: 0,2rem;
+        border-style: solid;
+        
+        display: flex;
+        transition: heigth 2seg; 
+       }
+    .cards__img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: black;
+        
+    }
+    .cards:hover{
+        width: 25rem;
+    }
+    .cards__description__text{
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        line-height: 1rem;
+        
+    }
+   
+    .cards__description__name{
+        margin-top: 1rem;
+        margin-bottom: 0,5rem;
+        padding-left: 0,5rem;
+        
+    }
+   .cardsBtn{
+       width: 2%;
+       margin: 1rem;
+       text-align: start;
+       text-decoration: none;
+       display: inline;
+       color: black;
+       background-color: darkgrey;
+       
+   }
+   .tarjetas{
+    width: 33vw;
+    border:rgb(31, 29, 29);
+    margin: 2rem;
+    border-radius: 0,5rem;
+    border-color: black;
+    border-width: 0,2rem;
+    border-style: solid;
+    background-color: black;
+    display: inline-block;
+    transition: heigth 2seg;
+ }
+ .tarjetas:hover{
+     width: 35rem;
+ }
+ .tarjetas__img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: black;
+    
+ }
+ .tajetas__descripcion{
+     background-color: beige;
+     text-align: center;
+     
+ }
+@media screen and (max-width: 1200px)
+{}
+   h5{
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    }
+    h4{
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+    }
+    h3{
+    height:fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+    }
+    .footer{
+        background-color: black;
+        color: rgb(192, 192, 185);
+        position: static;
+        width: 100vw;
+        height: 12rem;
+    }
+    .premios{
+        width: 20vw;
+        height: auto;
+        margin: 1,5rem;
+        padding: 1,5rem;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cards{
+        width: 25vw;
+        height: auto;
+        border:rgb(31, 29, 29);
+        margin: 2rem;
+        border-radius: 1rem;
+        border-color: black;
+        border-width: 0,5rem;
+        border-style: solid;
+        
+        display: flex;
+        transition: heigth 2seg; 
+       }
+    .cards__img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: black;
+        
+    }
+    .cards:hover{
+        width: 35rem;
+    }
+    .cards__description__text{
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+        line-height: 1rem;
+        
+    }
+   
+    .cards__description__name{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        
+    }
+   .cardsBtn{
+       width: 2%;
+       margin: 1rem;
+       text-align: start;
+       text-decoration: none;
+       display: inline;
+       color: black;
+       background-color: darkgrey;
+       
+   }
+   .tarjetas{
+    width: 45vw;
+    border:rgb(31, 29, 29);
+    margin: 2rem;
+    border-radius: 0,5rem;
+    border-color: black;
+    border-width: 0,2rem;
+    border-style: solid;
+    background-color: black;
+    display: inline-block;
+    transition: heigth 2seg;
+ }
+ .tarjetas:hover{
+     width: 45rem;
+ }
+ .tarjetas__img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: black;
+    
+ }
+ .tajetas__descripcion{
+     background-color: beige;
+     text-align: center;
+     
+ }
